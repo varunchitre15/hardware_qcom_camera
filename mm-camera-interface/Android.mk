@@ -31,7 +31,7 @@ LOCAL_C_INCLUDES+= \
     $(TARGET_OUT_HEADERS)/mm-still/jpeg \
     $(TARGET_OUT_HEADERS)/mm-still/mm-omx
 
-LOCAL_C_INCLUDES+= hardware/qcom/media/mm-core/inc
+LOCAL_C_INCLUDES+= $(call project-path-for,qcom-media)/mm-core/inc
 ifneq ($(call is-platform-sdk-version-at-least,20),true)
 LOCAL_CFLAGS += -include bionic/libc/kernel/arch-arm/asm/posix_types.h
 LOCAL_CFLAGS += -include bionic/libc/kernel/arch-arm/asm/byteorder.h
